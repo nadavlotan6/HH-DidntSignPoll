@@ -94,6 +94,7 @@ input[type='radio']:checked:after {
     height: 15px;
     border-radius: 10px;
     /* top: -2px; */
+    up: 2px;
     /* left: -1px; */
     position: relative;
     background-color: #70CBB3;
