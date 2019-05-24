@@ -81,6 +81,8 @@ input[type='checkbox']:checked:after {
     border-radius: 10px;
     /* top: -2px; */
     /* left: -1px; */
+    up: 3px;
+    right:3px;
     position: relative;
     background-color: #70CBB3;
     content: ' ';
@@ -94,7 +96,8 @@ input[type='radio']:checked:after {
     height: 15px;
     border-radius: 10px;
     /* top: -2px; */
-    up: 2px;
+    up: 3px;
+    right:3px;
     /* left: -1px; */
     position: relative;
     background-color: #70CBB3;
