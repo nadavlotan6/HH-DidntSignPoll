@@ -256,7 +256,7 @@ io.on('connection', function (socket) {
         // Authorize a client with credentials, then call the Google Sheets API.
         authorize(JSON.parse(content), listMajors);
     });
-    // if (sent_before != 'Y') {
+    if (sent_before != 'Y') {
         socket.emit('change_address', {
             full_address: full_address,
             sent: sent,
@@ -288,8 +288,8 @@ io.on('connection', function (socket) {
             third_seller_sms_unix: third_seller_sms_unix
         });
     // } else {
-        // do nothing if already sent
-    // }
+    //     // do nothing if already sent
+    }
 });
 
 server.listen(port, () => {
