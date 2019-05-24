@@ -78,9 +78,9 @@ input[type='radio']:after {
 input[type='checkbox']:checked:after {
     width: 15px;
     height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
+    border-radius: 10px;
+    /* top: -2px; */
+    /* left: -1px; */
     position: relative;
     background-color: #70CBB3;
     content: ' ';
@@ -92,12 +92,12 @@ input[type='checkbox']:checked:after {
 input[type='radio']:checked:after {
     width: 15px;
     height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
+    border-radius: 10px;
+    /* top: -2px; */
+    /* left: -1px; */
     position: relative;
     background-color: #70CBB3;
-    content: '👍🏼';
+    content: ' ';
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
