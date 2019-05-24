@@ -47,6 +47,34 @@
   </script>
 
   <script>
+    var form = document.getElementById('pollForm');
+
+    try {
+      form.addEventListener("submit", submitFn, false);
+    } catch (e) {
+      form.attachEvent("onsubmit", submitFn); //IE8
+    }
+
+    function submitFn(event) {
+      event.preventDefault();
+      var boxes = document.getElementsByClassName('checkbox');
+      var checked = [];
+      for (var i = 0; boxes[i]; ++i) {
+        if (boxes[i].checked) {
+          checked.push(boxes[i].name);
+        }
+      }
+
+      var checkedStr = checked.join();
+
+      document.getElementById('checkbox_str').value = checkedStr;
+      form.submit();
+
+      return false;
+    }
+  </script>
+
+  <script>
     function showUndecided() {
       document.getElementById('undecidedDiv').style.display = 'block';
     }
@@ -114,6 +142,7 @@
         <input name="firstQuestion" type="checkbox" value="comission"> העמלה גבוהה מדי <br>
         <input name="firstQuestion" type="checkbox" value="brokerage"> לא מעוניין בתיווך <br>
         <input name="firstQuestion" type="checkbox" value="meeting"> הפגישה לא הייתה כפי שציפיתי <br>
+        <input type="hidden" name="checkboxStr" id="checkbox_str">
       </div>
       <br>
 
@@ -144,9 +173,9 @@
 
       <button id="submitButton" class="button" type="submit"> שלח טופס </button>
       <!-- <button onclick="location.href = 'www.google.com';" id="submitButton" class="button" type="submit">שלח   -->
-      <script>
+      <!-- <script>
         $('#pollForm').serialize();
-      </script>
+      </script> -->
     </form>
   </div>
 
