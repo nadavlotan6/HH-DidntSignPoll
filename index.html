@@ -69,7 +69,8 @@
     <img class=logoImg src="https://www.homehero.co.il/assets/images/headerlogo.svg">
   </div>
   <div class=formDiv>
-    <form action="/checkbox.php" method="post" name="submit-to-google-sheet" align=center dir="rtl" onSubmit="alert('הטופס נשלח בהצלחה! \n תודה רבה! :)');">
+    <form id=pollForm name="submit-to-google-sheet" align=center dir="rtl"
+      onSubmit="alert('הטופס נשלח בהצלחה! \n תודה רבה! :)');">
 
       <div>
         <h1 style="margin-top:2px"> קבענו, נפגשנו והכרנו. </h1>
@@ -143,7 +144,9 @@
 
       <button id="submitButton" class="button" type="submit"> שלח טופס </button>
       <!-- <button onclick="location.href = 'www.google.com';" id="submitButton" class="button" type="submit">שלח   -->
-
+      <script>
+        $('#pollForm').serialize();
+      </script>
     </form>
   </div>
 
