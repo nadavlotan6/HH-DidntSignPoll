@@ -1,5 +1,4 @@
-<?php
-
-echo "<pre>";
-var_dump($_POST);
-exit;
+$_POST['interests'];  
+     foreach($_POST['interests'] as $interest) {
+     echo $interest;
+}
