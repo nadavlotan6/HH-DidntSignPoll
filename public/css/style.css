@@ -106,10 +106,11 @@ input[type='radio']:checked:after {
     border: 2px solid white;
 }
 
-.meetingDiv,
-.exclusivityDiv,
+.firstQuestionDiv,
+.secondQuestionDiv,
 .undecidedDiv {
     font-size: 20px;
+    text-align: right;
 }
 
 /* .notesDiv {
